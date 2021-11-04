@@ -48,5 +48,9 @@ Done. (4.1s)
 All images saved to /Users/glennjocher/PycharmProjects/flickr_scraper/images/honeybees_on_flowers/
 ```
 
+4. To move around the downloaded images, please see `Download Image data preprocess.ipynb` for instructions.
+
+
+
 # Reference
 It's modified based on [ultralytics's flickr_scraper](https://github.com/ultralytics/flickr_scraper)
