@@ -1,8 +1,6 @@
- <img src="https://storage.googleapis.com/ultralytics/logo/logoname1000.png" width="160">
-
 # Introduction
 
-This directory contains Flickr image-scraping software developed by Ultralytics LLC, and **is freely available for redistribution under the GPL-3.0 license**. For more information please visit https://www.ultralytics.com.
+Search translucent materials from Flickr.
 
 # Requirements
 
@@ -11,8 +9,8 @@ Python 3.7 or later with all of the `pip install -U -r requirements.txt` package
 
 # Install
 ```bash
-$ git clone https://github.com/ultralytics/flickr_scraper
-$ cd flickr_scraper
+$ git clone https://github.com/cl3789/Material_search_flickr.git
+$ cd Material_search_flickr
 $ pip install -U -r requirements.txt
 ```
 
@@ -26,7 +24,12 @@ key = ''
 secret = ''
 ```
 
-3. Search for up to `n` images, and optionally `--download`. URLs are printed to screen and downloaded images are saved in `flickr_scraper/images`. Note that image downloads may be subject to Flickr rate limits and other limitations. See https://www.flickr.com/services/developer/api/ for full information.
+3. Change the path name in `general.py` in `utils` L28:
+```python
+path_good_img = "/Users/chenxiliao/Dropbox/Projects/Search_Google_img/flickr_scraper/images/soap_refined_batch"
+```
+
+4. Search for up to `n` images, and optionally `--download`. URLs are printed to screen and downloaded images are saved in `flickr_scraper/images`. Note that image downloads may be subject to Flickr rate limits and other limitations. See https://www.flickr.com/services/developer/api/ for full information.
 
 ```bash
 $ python3 flickr_scraper.py --search 'honeybees on flowers' --n 10 --download
@@ -44,22 +47,6 @@ $ python3 flickr_scraper.py --search 'honeybees on flowers' --n 10 --download
 Done. (4.1s)
 All images saved to /Users/glennjocher/PycharmProjects/flickr_scraper/images/honeybees_on_flowers/
 ```
-<img src="https://user-images.githubusercontent.com/26833433/75074332-4792c600-54b0-11ea-8c98-22acf58ba8e7.jpg" width="">
 
-# Cite
-
-[![DOI](https://zenodo.org/badge/242235660.svg)](https://zenodo.org/badge/latestdoi/242235660)
-
-## About Us
-
-Ultralytics is a U.S.-based particle physics and AI startup with over 6 years of expertise supporting government, academic and business clients. We offer a wide range of vision AI services, spanning from simple expert advice up to delivery of fully customized, end-to-end production solutions, including:
-- **Cloud-based AI** systems operating on **hundreds of HD video streams in realtime.**
-- **Edge AI** integrated into custom iOS and Android apps for realtime **30 FPS video inference.**
-- **Custom data training**, hyperparameter evolution, and model exportation to any destination.
-
-For business inquiries and professional support requests please visit us at https://www.ultralytics.com. 
-
-
-## Contact
-
-**Issues should be raised directly in the repository.** For business inquiries or professional support requests please visit https://www.ultralytics.com or email Glenn Jocher at glenn.jocher@ultralytics.com. 
+# Reference
+It's modified based on [ultralytics's flickr_scraper](https://github.com/ultralytics/flickr_scraper)
